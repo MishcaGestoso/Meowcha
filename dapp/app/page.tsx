@@ -225,7 +225,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="flex items-center justify-center mb-56">{showCard()}</div>
+      <div className="flex items-center justify-center lg:mb-56 mb-20">{showCard()}</div>
 
       <div className="absolute bottom-0 left-0 w-full h-14 bg-black bg-opacity-50 z-10;">
         <p className="flex items-center h-full justify-spaces-between">

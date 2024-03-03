@@ -13,11 +13,11 @@ function Minting() {
 
   const addToken = async () => {
     const { ethereum } = window as any;
-    const tokenAddress = "0x81cb69089160cBA0F366d992Ec230efC7AFCc8b4";
-    const tokenSymbol = "BUB";
+    const tokenAddress = "0xD2Ab28399a6D9E7ddb16542f5dF74f2F0F219585";
+    const tokenSymbol = "MEOW";
     const tokenDecimals = 18;
     const tokenImage =
-      "https://raw.githubusercontent.com/Publeo-RT/Bubbles-ERC20/main/dapp/public/images/Bubbles.png";
+      "https://raw.githubusercontent.com/MishcaGestoso/Meowcha/main/dapp/public/images/Meowcha.png";
 
     try {
       const wasAdded = await ethereum.request({
@@ -85,9 +85,9 @@ function Minting() {
 
   return (
     <div
-      className="mt-36 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
+      className="mt-36 lg:mt-0 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
       style={{
-        width: "100%", // Set default width for smaller screens
+        width: "120%", // Set default width for smaller screens
         height: "40vh",
       }}
     >
@@ -138,7 +138,7 @@ function Minting() {
         />
         <div>
           <button
-            className="mt-8 font-wonderbar text-pink-500 text-2xl rounded-3xl p-3 bg-white transition duration-200 ease-in-out hover:bg-gray-200 hover:shadow-lg"
+            className="mt-8 font-wonderbar text-pink-500 text-2xl rounded-3xl p-5 bg-white transition duration-200 ease-in-out hover:bg-gray-200 hover:shadow-lg"
             onClick={() => {
               mintCoin();
             }}

@@ -42,7 +42,7 @@ function Staking() {
       setTransactionHash(tx.hash);
     } catch (e: any) {
       const decodedError = contract.interface.parseError(e.data);
-      alert(`Minting failed: ${decodedError?.args}`);
+      alert(`Staking failed: ${decodedError?.args}`);
     }
   };
 
@@ -58,31 +58,28 @@ function Staking() {
 
   return (
     <div
-      className="mt-20 grid text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left rounded-full p-10 bg-gradient-to-b from-red-500 to-red-700 transition-all border-white border-8"
+      className="mt-36 lg:mt-0 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
       style={{
-        width: "100vh",
+        width: "120%", // Set default width for smaller screens
         height: "40vh",
-        position: "relative",
       }}
     >
-      <div className="flex justify-center items-center flex-col">
-        <div className="mb-10 minting-container flex items-center">
-          <span className="mt-9 flex justify-center items-center font-bubbles text-white text-2xl">
-            Bubbles Staked: &nbsp;{" "}
-            <p
-              className="text-white font-sans text-2xl"
-              style={{ marginTop: "-4px" }}
-            >
-              {stakedAmountString}
-            </p>
-            <Image
-              src="/images/Bubbles.png"
-              alt="Left Image"
-              width={30}
-              height={30}
-              className="ml-1"
-            />
-          </span>
+      <div>
+        <span className="mt-5 flex justify-center items-center font-wonderbar text-white text-2xl">
+          Meowcha Staked: &nbsp;{" "}
+          <p
+            className="font-sans text-white text-2xl"
+            style={{ marginTop: "-4px" }}
+          >
+            {stakedAmountString}
+          </p>
+          <Image
+            src="/images/Meowcha.png"
+            alt="Left Image"
+            width={50}
+            height={50}
+            className="ml-1"
+          />
           <button
             onClick={() => {
               getStake();
@@ -93,7 +90,7 @@ function Staking() {
               alt="Left Image"
               width={20}
               height={20}
-              className="ml-4 mt-8"
+              className="ml-4 mb-1"
               style={{ filter: "invert(1)", transition: "transform 0.3s" }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.1)";
@@ -103,53 +100,54 @@ function Staking() {
               }}
             />
           </button>
-        </div>
-
+        </span>
         <input
           type="number"
-          className="rounded-full p-2 focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent bg-red-400 caret-white"
+          className="rounded-full p-2 focus:outline-none focus:ring-4 focus:ring-white focus:border-transparent duration:100 transition-all bg-pink-400 caret-white"
           value={stakingAmount}
           onChange={(e) => amountChange(e)}
           placeholder="Enter amount to stake"
           style={{ color: "white" }}
         />
-        <button
-          className="mt-8 flex justify-center items-center font-bubbles text-red-500 text-2xl rounded-full p-3 bg-white transition duration-200 ease-in-out hover:bg-gray-200 hover:shadow-lg"
-          onClick={() => {
-            stakeCoin();
-          }}
-        >
-          STAKE
-        </button>
-        <div className="mt-1 text-2xl">
+        <div>
+          <button
+            className="mt-8 font-wonderbar text-pink-500 text-2xl rounded-3xl p-5 bg-white transition duration-200 ease-in-out hover:bg-gray-200 hover:shadow-lg"
+            onClick={() => {
+              stakeCoin();
+            }}
+          >
+            STAKE
+          </button>
+        </div>
+        <div className="text-2xl">
           {submitted && (
-            <div className="minting-container flex items-center">
+            <div className="mt-4 flex items-center justify-center">
               <Image
-                src="/images/Bubbles.png"
+                src="/images/donut.png"
                 alt="Left Image"
                 width={40}
                 height={40}
-                className="mr-5"
+                className="mr-3"
               />
-              <p className="font-bubbles text-white">Staking successful!</p>
+              <p className="font-wonderbar text-white">Staking Successful!</p>
               <Image
-                src="/images/Bubbles.png"
+                src="/images/donut.png"
                 alt="Left Image"
                 width={40}
                 height={40}
-                className="ml-5"
+                className="ml-3"
               />
             </div>
           )}
         </div>
-        <div className="mb-4">
+        <div className="">
           {submitted && (
-            <div className="minting-container flex items-center">
+            <div className="justify-center flex items-center">
               <a
                 href={`https://sepolia.arbiscan.io/tx/${transactionHash}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bubbles text-cyan-300 cursor-pointer hover:scale-105 transition"
+                className="font-wonderbar text-cyan-300 cursor-pointer hover:scale-105 transition"
               >
                 Click to View Transaction
               </a>
