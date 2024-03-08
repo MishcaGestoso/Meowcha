@@ -85,11 +85,11 @@ function Minting() {
 
   return (
     <div
-      className="mt-40 lg:mt-40 flex justify-center items-center text-white text-center rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
-      style={{
-        width: "1000vh", // Set default width for smaller screens
-        height: "50vh",
-      }}
+  className="mt-40 lg:mt-40 flex justify-center items-center text-white text-center rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
+  style={{
+    width: "1000%", 
+    height: "60vh", 
+  }}
     >
       <div>
         <span className="mt-5 flex justify-center items-center font-wonderbar text-white text-2xl">

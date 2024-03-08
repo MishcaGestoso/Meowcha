@@ -69,10 +69,10 @@ function Withdraw() {
 
   return (
     <div
-      className="mt-40 lg:mt-20 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
-      style={{
-        width: "50%", // Set default width for smaller screens
-        height: "40vh",
+    className="mt-40 lg:mt-40 flex justify-center items-center text-white text-center rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
+  style={{
+    width: "1000%", 
+    height: "60vh", 
       }}
     >
       <div>

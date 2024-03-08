@@ -134,23 +134,13 @@ export default function Home() {
       </div>
 
       <div
-  className="text-white fixed left-40 top-70 lg:top-40 grid text-left p-5 bg-gradient-to-b from-pink-500 to-pink-700 shadow-xl rounded-3xl border-8 border-white transition duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg"
+  className="text-white fixed left-20 top-60 lg:top-55 grid text-left p-5 bg-gradient-to-b from-pink-500 to-pink-700 shadow-xl rounded-3xl border-8 border-white transition duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg"
   style={{
-    width: "22%",
-    height: "40vh",
+    width: "20%",
+    height: "50vh",
     zIndex: 999 
   }}
 >
-        
-        <style>
-          {`
-      @media (max-width: 767px) {
-        div {
-          width: 50vh; // Set width to 50vh on screens up to 767px
-        }
-      }
-    `}
-        </style>
 
         <button
           className="group rounded-3xl border border-transparent px-5 py-4 transition-all duration-300 hover:shadow-lg hover:bg-gray-800/30 focus:bg-gray-900/40"
@@ -213,31 +203,6 @@ export default function Home() {
 
       <div className="flex items-right justify-center lg:mb-90 mb-30" style={{ width: "700px", height: "250px" }}>
         {showCard()}
-      </div>
-
-      <div className="absolute bottom-0 left-0 w-full h-14 bg-pink-900 bg-opacity-50 z-10;">
-        <p className="flex items-center h-full justify-spaces-between">
-          <span className="font-wonderbar text-white text-2xl ml-2">
-           Project by Mishca Gestoso
-          </span>
-         
-      
-          <a
-            href="https://github.com/MishcaGestoso"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mr-5"
-          >
-            <Image
-              src="/images/githublogo.svg"
-              alt="Github Logo"
-              className=""
-              width={40}
-              height={40}
-              priority
-            />
-          </a>
-        </p>
       </div>
     </main>
   );
