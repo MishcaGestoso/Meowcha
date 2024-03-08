@@ -77,6 +77,7 @@ export default function Home() {
     <main
       className="flex min-h-screen flex-col items-center justify-between p-12 relative"
       style={{
+        
         backgroundImage: `url(${Background.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -85,11 +86,11 @@ export default function Home() {
         overflow: "hidden",
       }}
     >
-      <div className="absolute top-0 left-0 w-full h-30vh bg-black bg-opacity-50 z-10;">
+      <div className="absolute top-0 left-0 w-full h-30vh bg-pink-900 bg-opacity-50 z-10;">
         <p className="left-0 top-0 flex w-full justify-space-between items-center p-8 pb-6 pt-8 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:p-4 lg:dark:bg-transparent">
           <div className="flex items-center group">
             <a
-              href="https://www.youtube.com/watch?v=Clc9MJAsoWE"
+              href="https://www.youtube.com/shorts/7fTHD07Q9Pw"
               target="_blank"
               rel="noopener noreferrer"
               className=""
@@ -104,7 +105,7 @@ export default function Home() {
               />
             </a>
             <a
-              href="https://www.youtube.com/watch?v=Clc9MJAsoWE"
+              href="https://www.youtube.com/shorts/7fTHD07Q9Pw"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white font-wonderbar text-3xl -ml-2 group-hover:scale-105 transition duration-300 motion-reduce:transform-none "
@@ -120,25 +121,27 @@ export default function Home() {
           >
             {walletKey !== "" && (
               <>
-                <span className=""> Connected: </span>
+                <span className=""> You are Connected!: </span>
                 <span className="font-sans">
                   {walletKey.substring(0, 7)}
                   {walletKey.length > 7 ? "..." : ""}
                 </span>
               </>
             )}
-            {walletKey === "" && <span className="">Connect Wallet</span>}
+            {walletKey === "" && <span className="">Click Here to Connect Wallet</span>}
           </button>
         </p>
       </div>
 
       <div
-        className="text-white relative top-32 lg:top-28 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left p-4 bg-gradient-to-b from-pink-500 to-pink-700 shadow-xl rounded-3xl border-8 border-white"
-        style={{
-          width: "100%", // Default width for larger screens
-          height: "100%",
-        }}
-      >
+  className="text-white fixed left-40 top-70 lg:top-40 grid text-left p-5 bg-gradient-to-b from-pink-500 to-pink-700 shadow-xl rounded-3xl border-8 border-white transition duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg"
+  style={{
+    width: "22%",
+    height: "40vh",
+    zIndex: 999 
+  }}
+>
+        
         <style>
           {`
       @media (max-width: 767px) {
@@ -156,13 +159,7 @@ export default function Home() {
           <h2
             className={`flex items-center justify-center font-wonderbar text-white text-3xl ml-auto transition-transform group-hover:scale-110 duration:300 motion-reduce:transform-none `}
           >
-            <Image
-              src="/images/donut.png"
-              alt="Left Image"
-              width={40}
-              height={40}
-              className="mr-2 "
-            />
+           
             <span className="inline-block transition-transform group-hover:scale-110 duration:300 motion-reduce:transform-none ">
               Mint{" "}
             </span>
@@ -170,7 +167,7 @@ export default function Home() {
           <p
             className={`mt-2 m-0 text-white text-sm opacity-50 font-wonderbar group-hover:opacity-90 group-focus:opacity-90 transition-all duration-300`}
           >
-            Get some sweet Meowcha!
+            Get some sweet Meoow!
           </p>
         </button>
 
@@ -181,13 +178,8 @@ export default function Home() {
           <h2
             className={`flex items-center justify-center font-wonderbar text-white text-3xl ml-auto transition-transform group-hover:scale-110 duration:300 motion-reduce:transform-none `}
           >
-            <Image
-              src="/images/donut.png"
-              alt="Left Image"
-              width={40}
-              height={40}
-              className="mr-2"
-            />
+            
+    
             <span className="inline-block transition-transform group-hover:scale-110 duration:300 motion-reduce:transform-none">
               Stake{" "}
             </span>
@@ -195,7 +187,7 @@ export default function Home() {
           <p
             className={`mt-2 m-0 text-white text-sm opacity-50 font-wonderbar group-hover:opacity-90 group-focus:opacity-90 transition-all duration-300`}
           >
-            Earn more Meowcha!
+            Earn more Meoow!
           </p>
         </button>
 
@@ -206,13 +198,7 @@ export default function Home() {
           <h2
             className={`flex items-center justify-center font-wonderbar text-white text-3xl ml-auto transition-transform group-hover:scale-110 duration:300 motion-reduce:transform-none `}
           >
-            <Image
-              src="/images/donut.png"
-              alt="Left Image"
-              width={40}
-              height={40}
-              className="mr-2"
-            />
+            
             <span className="inline-block transition-transform group-hover:scale-110 duration:300 motion-reduce:transform-none">
               Withdraw{" "}
             </span>
@@ -220,35 +206,22 @@ export default function Home() {
           <p
             className={`mt-2 m-0 text-white text-sm opacity-50 font-wonderbar group-hover:opacity-90 group-focus:opacity-90 transition-all duration-300`}
           >
-            Get your sweet Meowcha!
+            Get your sweet Meooow!
           </p>
         </button>
       </div>
 
-      <div className="flex items-center justify-center lg:mb-56 mb-20">
+      <div className="flex items-right justify-center lg:mb-90 mb-30" style={{ width: "700px", height: "250px" }}>
         {showCard()}
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-14 bg-black bg-opacity-50 z-10;">
+      <div className="absolute bottom-0 left-0 w-full h-14 bg-pink-900 bg-opacity-50 z-10;">
         <p className="flex items-center h-full justify-spaces-between">
           <span className="font-wonderbar text-white text-2xl ml-2">
-            Made by Mishca Gestoso
+           Project by Mishca Gestoso
           </span>
-          <a
-            href="https://arbitrum.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mr-5 ml-auto"
-          >
-            <Image
-              src="/images/arbitrum-arb-logo.png"
-              alt="Arbitrum Logo"
-              className=""
-              width={40}
-              height={40}
-              priority
-            />
-          </a>
+         
+      
           <a
             href="https://github.com/MishcaGestoso"
             target="_blank"

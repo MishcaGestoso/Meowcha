@@ -58,9 +58,9 @@ function Staking() {
 
   return (
     <div
-      className="mt-36 lg:mt-0 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
+      className="mt-40 lg:mt-20 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
       style={{
-        width: "120%", // Set default width for smaller screens
+        width: "50%", 
         height: "40vh",
       }}
     >
@@ -122,21 +122,9 @@ function Staking() {
         <div className="text-2xl">
           {submitted && (
             <div className="mt-4 flex items-center justify-center">
-              <Image
-                src="/images/donut.png"
-                alt="Left Image"
-                width={40}
-                height={40}
-                className="mr-3"
-              />
-              <p className="font-wonderbar text-white">Staking Successful!</p>
-              <Image
-                src="/images/donut.png"
-                alt="Left Image"
-                width={40}
-                height={40}
-                className="ml-3"
-              />
+             
+              <p className="font-wonderbar text-white">Transaction Confirmed!</p>
+             
             </div>
           )}
         </div>

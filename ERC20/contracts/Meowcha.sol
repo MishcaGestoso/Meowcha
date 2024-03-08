@@ -39,7 +39,7 @@ contract Meowcha is ERC20, Ownable {
   }
 
     function withdraw() public {
-        require(block.timestamp > (_lastStakeTimestamp[msg.sender] + lockInPeriod), "You cannot withdraw funds, you are still in the lock in period");
+        require(block.timestamp > (_lastStakeTimestamp[msg.sender] + lockInPeriod), "You cannot withdraw funds, you are still in the lack in period");
         require(_stakes[msg.sender] > 0, "No staked tokens");
 
         uint256 stakedAmount = _stakes[msg.sender];

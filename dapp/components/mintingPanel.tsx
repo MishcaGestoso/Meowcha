@@ -85,15 +85,15 @@ function Minting() {
 
   return (
     <div
-      className="mt-36 lg:mt-0 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
+      className="mt-40 lg:mt-40 flex justify-center items-center text-white text-center rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
       style={{
-        width: "120%", // Set default width for smaller screens
-        height: "40vh",
+        width: "1000vh", // Set default width for smaller screens
+        height: "50vh",
       }}
     >
       <div>
         <span className="mt-5 flex justify-center items-center font-wonderbar text-white text-2xl">
-          Meowcha: &nbsp;{" "}
+          Meowcha Mint: &nbsp;{" "}
           <p
             className="font-sans text-white text-2xl"
             style={{ marginTop: "-4px" }}
@@ -149,21 +149,10 @@ function Minting() {
         <div className="text-2xl">
           {submitted && (
             <div className="mt-4 flex items-center justify-center">
-              <Image
-                src="/images/donut.png"
-                alt="Left Image"
-                width={40}
-                height={40}
-                className="mr-3"
-              />
-              <p className="font-wonderbar text-white">Minting Successful!</p>
-              <Image
-                src="/images/donut.png"
-                alt="Left Image"
-                width={40}
-                height={40}
-                className="ml-3"
-              />
+              
+              <p className="font-wonderbar text-white"> Transaction Confirmed!</p>
+             
+      
             </div>
           )}
         </div>
@@ -174,14 +163,15 @@ function Minting() {
                 href={`https://sepolia.arbiscan.io/tx/${transactionHash}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-wonderbar text-cyan-300 cursor-pointer hover:scale-105 transition"
+                className="font-wonderbar text-green-500 cursor-pointer hover:scale-105 transition duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg"
               >
-                Click to View Transaction
+                Click Here to View Transaction
               </a>
             </div>
           )}
         </div>
-        <div className="font-wonderbar text-lime-300  cursor-pointer hover:scale-105 transition">
+        <div className="font-wonderbar text-lime-300  cursor-pointer hover:scale-105 transition duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg"
+        >
           {submitted && (
             <div className="justify-center flex items-center">
               <button

@@ -69,15 +69,15 @@ function Withdraw() {
 
   return (
     <div
-      className="mt-36 lg:mt-0 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
+      className="mt-40 lg:mt-20 flex justify-center items-center text-white text-center lg:max-w-5xl lg:w-full lg:mb-0 rounded-3xl bg-gradient-to-b from-pink-500 to-pink-700 transition-all border-white border-8"
       style={{
-        width: "120%", // Set default width for smaller screens
+        width: "50%", // Set default width for smaller screens
         height: "40vh",
       }}
     >
       <div>
         <span className="mt-5 flex justify-center items-center font-wonderbar text-white text-2xl">
-          Withdrawable Meowcha: &nbsp;{" "}
+        Meowcha Withdrawable: &nbsp;{" "}
         </span>
 
         <div className="flex justify-center items-center">
@@ -116,8 +116,8 @@ function Withdraw() {
             Withdraw Status: &nbsp;
             <span style={{ color: elapsedStakeTime > 60 ? "lime" : "maroon" }}>
               {elapsedStakeTime > 60
-                ? " CANDY TIME"
-                : " You can't get the sweets yet"}
+                ? " IT'S CANDY TIME! "
+                : " Sorry, You can't get the sweets yet"}
             </span>
             <button
               onClick={() => {
@@ -155,21 +155,9 @@ function Withdraw() {
         <div className="text-2xl">
           {submitted && (
             <div className="mt-4 flex items-center justify-center">
-              <Image
-                src="/images/donut.png"
-                alt="Left Image"
-                width={40}
-                height={40}
-                className="mr-3"
-              />
-              <p className="font-wonderbar text-white">Withdraw Successful!</p>
-              <Image
-                src="/images/donut.png"
-                alt="Left Image"
-                width={40}
-                height={40}
-                className="ml-3"
-              />
+              
+              <p className="font-wonderbar text-white"> Transaction Successful!</p>
+             
             </div>
           )}
         </div>
