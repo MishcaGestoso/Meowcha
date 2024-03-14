@@ -1,13 +1,10 @@
 "use client";
-import { BrowserProvider } from "ethers";
-import { JsonRpcProvider } from "ethers/providers";
 import Image from "next/image";
-import Minting from "../components/mintingPanel";
-import Staking from "../components/stakingPanel";
-import ConnectMessage from "../components/connectMessage";
-import Withdraw from "../components/withdrawPanel";
+import Minting from "../components/minting";
+import Staking from "../components/staking";
+import ConnectMessage from "../components/connect";
+import Withdraw from "../components/withdraw";
 import { useEffect, useState } from "react";
-import { getContract } from "../config";
 import Background from "../public/images/BG.png";
 export default function Home() {
   const [walletKey, setwalletKey] = useState("");
